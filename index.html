@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Доска публикаций</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Доска публикаций</h1>
+
+        <section class="card">
+            <button id="load-btn" type="button">Загрузить публикации</button>
+            <p id="load-status" class="status" aria-live="polite"></p>
+            <ul id="posts" class="posts"></ul>
+        </section>
+
+        <section class="card">
+            <h2>Создать публикацию</h2>
+            <form id="create-form" novalidate>
+                <div class="field">
+                    <label for="title-input">Заголовок</label>
+                    <input id="title-input" type="text" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="body-input">Текст</label>
+                    <textarea id="body-input" rows="4"></textarea>
+                </div>
+                <button id="submit-btn" type="submit">Создать публикацию</button>
+            </form>
+            <p id="form-status" class="status" aria-live="polite"></p>
+        </section>
+    </main>
+</body>
+</html>
